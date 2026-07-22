@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Tipografía autoalojada — familia Barlow (equivalente libre a Myriad)
+   Generado a partir de @fontsource. Solo subset "latin" (cubre español).
+   ========================================================================== */
+
+/* Barlow — cuerpo de texto */
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;
+  src:url('../fonts/barlow-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;
+  src:url('../fonts/barlow-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;
+  src:url('../fonts/barlow-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;
+  src:url('../fonts/barlow-latin-700-normal.woff2') format('woff2');}
+
+/* Barlow Semi Condensed — titulares */
+@font-face{font-family:'Barlow Semi Condensed';font-style:normal;font-weight:600;font-display:swap;
+  src:url('../fonts/barlow-semi-condensed-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow Semi Condensed';font-style:normal;font-weight:700;font-display:swap;
+  src:url('../fonts/barlow-semi-condensed-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow Semi Condensed';font-style:normal;font-weight:800;font-display:swap;
+  src:url('../fonts/barlow-semi-condensed-latin-800-normal.woff2') format('woff2');}
+
+/* Barlow Condensed — antetítulos, cifras y etiquetas */
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;
+  src:url('../fonts/barlow-condensed-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;
+  src:url('../fonts/barlow-condensed-latin-700-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;
+  src:url('../fonts/barlow-condensed-latin-800-normal.woff2') format('woff2');}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;
+  src:url('../fonts/barlow-condensed-latin-900-normal.woff2') format('woff2');}

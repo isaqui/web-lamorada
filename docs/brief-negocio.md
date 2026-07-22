@@ -1,28 +1,43 @@
-# Contexto del Proyecto: Sitio Web Parque Cementerio "La Morada"
+# Brief de negocio — Parque Cementerio "La Morada"
+
+> Documento de referencia completo. El resumen accionable para trabajar con
+> Claude Code está en `../CLAUDE.md`; este archivo conserva todo el detalle
+> original del brief para consulta.
 
 ## Contexto del negocio
+
 Parque Cementerio "La Morada" ofrece:
 - **Venta de lotes y inhumación** (espacios de inhumación individuales y familiares)
 - **Planes de previsión funeraria** (adquisición anticipada con pago programado)
 
-El sitio web tiene como propósito servir como **herramienta de apoyo a ventas**, no como tienda transaccional automática. La meta es generar contactos calificados (leads) que luego un asesor humano atienda personalmente.
+El sitio web tiene como propósito servir como **herramienta de apoyo a
+ventas**, no como tienda transaccional automática. La meta es generar
+contactos calificados (leads) que luego un asesor humano atienda
+personalmente.
 
 ## Objetivo principal
+
 Generar contactos y leads mediante:
 - Formularios de contacto claros y breves (nombre, teléfono, interés: lote/mausoleo o plan de previsión)
 - Botón de WhatsApp visible en todo momento (idealmente flotante, siempre accesible)
 - Llamados a la acción (CTA) simples: "Solicita información", "Habla con un asesor", "Conoce nuestros planes"
 
-Todo contenido y diseño debe orientarse a facilitar que el visitante deje sus datos o inicie una conversación por WhatsApp, no a que complete una compra en línea.
+Todo contenido y diseño debe orientarse a facilitar que el visitante deje sus
+datos o inicie una conversación por WhatsApp, no a que complete una compra en
+línea.
 
 ## Público objetivo
+
 - Personas de 18+ años que piensan en la previsión funeraria propia o de su familia
 - Familias que necesitan resolver una compra de forma más inmediata (situación de duelo reciente o cercana)
 - Adultos que buscan tranquilidad financiera y evitar cargar esta decisión a sus seres queridos
 
-**Importante:** estos dos perfiles tienen estados emocionales muy distintos. El sitio debe poder atender ambos sin que el segundo perfil (duelo activo) se sienta abordado con lenguaje comercial agresivo.
+**Importante:** estos dos perfiles tienen estados emocionales muy distintos.
+El sitio debe poder atender ambos sin que el segundo perfil (duelo activo) se
+sienta abordado con lenguaje comercial agresivo.
 
 ## Tono y voz
+
 - **Cálido y empático** ante todo: lenguaje humano, cercano, que acompañe
 - Evitar tecnicismos funerarios fríos; preferir palabras como "acompañar", "cuidar", "tranquilidad", "familia", "legado", "descanso"
 - Nunca usar urgencia artificial, miedo o presión ("compre antes de que sea tarde", descuentos agresivos, cuentas regresivas)
@@ -30,16 +45,21 @@ Todo contenido y diseño debe orientarse a facilitar que el visitante deje sus d
 - Evitar humor, ironía o cualquier tono ligero; mantener siempre respeto por el tema
 
 ## Estructura sugerida del sitio
+
 1. **Inicio**: mensaje de bienvenida cálido + CTA principal (contacto/WhatsApp) + imagen serena del parque
 2. **Nuestros servicios**: lotes y mausoleos / planes de previsión, explicados con beneficios (no solo características técnicas)
 3. **Planes de previsión**: enfoque en tranquilidad y planificación anticipada, beneficios de pagar en vida
-4. **Plano de disponibilidad**: este enlace ya existe https://lamorada.sistemas-orange.com.bo/modulos/uv/?mapa=YWRtaW4&u=1 aquí muestra información de cada lote estados DISPONIBLE, VENDIDO, RESERVADO y BLOQUEADO
+4. **Plano de disponibilidad**: enlace existente
+   `https://lamorada.sistemas-orange.com.bo/modulos/uv/?mapa=YWRtaW4&u=1`,
+   muestra información de cada lote (estados DISPONIBLE, VENDIDO, RESERVADO y
+   BLOQUEADO), organizado en los sectores **Diamante, Rubí y Esmeralda**
 5. **Instalaciones**: fotos del parque, jardines, áreas comunes (transmitir paz y cuidado)
 6. **Preguntas frecuentes**: dudas comunes sobre trámites, pagos, documentación
 7. **Testimonios** (si se dispone de ellos, con autorización): experiencias reales de familias
 8. **Contacto**: formulario simple + WhatsApp + teléfono + ubicación/mapa
 
 ## Lineamientos éticos y de sensibilidad (obligatorios)
+
 - No presentar la muerte con imágenes gráficas, dramáticas o alarmantes
 - No utilizar tácticas de miedo ("¿qué pasará con su familia si usted falta?") de forma explotadora
 - Ser transparente en precios y condiciones cuando se mencionen; evitar letra pequeña engañosa
@@ -47,19 +67,42 @@ Todo contenido y diseño debe orientarse a facilitar que el visitante deje sus d
 - Cualquier testimonio o caso de uso debe ser ficticio/genérico salvo que el negocio aporte testimonios reales autorizados
 
 ## Qué evitar
+
 - Diseños o textos que se sientan "de venta agresiva" (rebajas tipo outlet, temporizadores de oferta)
 - Comparaciones con la competencia
 - Prometer beneficios legales o financieros específicos sin verificar (evitar asesoría legal/financiera no autorizada)
 - Cualquier contenido que pueda generar culpa o presión emocional en el usuario
 
-## Notas al trabajar en este proyecto
+## Identidad visual definida en el proceso de diseño
+
+### Colores corporativos
+- Primario: `#904515`
+- Secundario: `#E5A100`
+- Apoyo: `#000000` / `#ffffff`
+
+### Tipografía
+Familia **Barlow** (Google Fonts), como equivalente libre de referencia
+"Myriad Variable Concept / Black SemiCondensed / Condensed":
+- Barlow — cuerpo
+- Barlow Semi Condensed — titulares
+- Barlow Condensed — antetítulos, cifras, etiquetas
+
+### Iconografía
+Font Awesome exclusivamente, sin mezclar librerías.
+
+### Botones
+Radio único, sin curvatura en las esquinas superiores.
+
+## Datos de contacto reales
+
+- WhatsApp / teléfono: +591 75552144
+- Email: info@lamorada.com.bo
+- Dirección: Tercer Anillo Externo, entre Av. Mutualista y Av. Paragua, esq.
+  C. F. de Aguilera #362, Santa Cruz de la Sierra, Bolivia
+
+## Notas para Claude al trabajar en este proyecto
+
 - Al redactar textos, priorizar claridad y calidez sobre creatividad llamativa
 - Al sugerir diseño, priorizar colores suaves, tipografía legible, mucho espacio en blanco, imágenes de naturaleza (jardines, cielo, árboles)
 - Ante cualquier duda sobre un dato del negocio (precios, ubicación, horarios, nombres de planes), preguntar en vez de inventar
 - Cada pieza de contenido debe tener un CTA claro hacia contacto/WhatsApp
-
-## Datos de contacto
-- **Dirección:** Tercer Anillo Externo, Entre Av. Mutualista y Av. Paragua, Esquina C. F. de Aguilera # 362, Santa Cruz - Bolivia
-- **WhatsApp / Teléfono:** +591 75552144
-- **Email:** info@lamorada.com.bo
-- **Facebook:** https://www.facebook.com/LaMoradaParqueCementerio
