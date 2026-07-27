@@ -77,8 +77,8 @@
   .hero-grid{display:grid;grid-template-columns:1.08fr 1fr;gap:4rem;align-items:center}
   .hero-carousel .eyebrow{color:var(--gold-l)}
   .hero-carousel .eyebrow::before{background:linear-gradient(90deg,var(--gold) 0%,var(--gold-l) 100%)}
-  .hero-carousel h1{font-family:var(--f-disp);font-weight:800;font-size:clamp(2.9rem,6vw,5rem);letter-spacing:-.025em;color:#fff}
-  .hero-carousel h1 span{color:var(--gold-l)}
+  .hero-carousel h1,.hero-carousel h2{font-family:var(--f-disp);font-weight:800;font-size:clamp(2.9rem,6vw,5rem);letter-spacing:-.025em;color:#fff}
+  .hero-carousel h1 span,.hero-carousel h2 span{color:var(--gold-l)}
   .hero-carousel .lead{font-size:1.16rem;color:rgba(255,255,255,.82);margin:1.5rem 0 2.1rem;max-width:35ch}
   .hero-cta{display:flex;gap:.9rem;flex-wrap:wrap}
   .hero-carousel .btn-outline{color:#fff;border-color:rgba(255,255,255,.5)}
@@ -415,6 +415,7 @@
   .reveal{opacity:0}
   .reveal.in{opacity:1}
   .reveal.animate__animated{animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   .skip{position:absolute;left:-999px;top:0;background:var(--primary);color:#fff;padding:.6rem 1rem;z-index:100;border-radius:0 0 var(--r) 0}
   .skip:focus{left:0}
   :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}

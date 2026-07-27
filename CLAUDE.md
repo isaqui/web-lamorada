@@ -70,12 +70,18 @@ El plano interactivo real vive en:
 ```
 web-lamorada/
 ├── CLAUDE.md
+├── robots.txt
+├── sitemap.xml
 ├── docs/
 │   └── brief-negocio.md
 ├── recursos/
-│   ├── img/       imágenes reales (jpg/png), nunca base64 inline
-│   ├── css/       style.css, fonts.css, fontawesome.min.css
-│   ├── js/        main.js
+│   ├── img/
+│   │   ├── banner/    fotos del hero slider (banner_0.jpg, banner_2.png...)
+│   │   └── galeria/   fotos reales de "Instalaciones", una subcarpeta por categoría:
+│   │                  proyecto/ (renders 3D), avances/ (obra), inaguracion/ (evento)
+│   │                  — archivos numerados (_1, _2...) para el orden de visualización
+│   ├── css/       style.css, fonts.css, fontawesome.min.css + libs de terceros (ver abajo)
+│   ├── js/        main.js, map.js + libs de terceros (ver abajo)
 │   └── fonts/     woff2 de Barlow + Font Awesome, autoalojados
 └── index.html
 ```
@@ -84,6 +90,29 @@ web-lamorada/
 - Imágenes **siempre como archivos**, nunca embebidas en base64.
 - Un solo `index.html` por página; si se agregan páginas internas
   (Nosotros, Previsión, Contacto), seguir el mismo patrón de carpetas.
+
+## Librerías de terceros ya integradas
+
+No reintroducir ni duplicar — ya están autoalojadas (excepto Google Maps, que
+por naturaleza es un servicio externo):
+- **Owl Carousel 2** (`owl.carousel.min.{css,js}` + tema) — hero slider y
+  carrusel de testimonios.
+- **Justified Gallery** (`justifiedGallery.min.{css,js}`) — galería de
+  "Instalaciones", con filtros por categoría y modal propio (`main.js`).
+- **Animate.css** (`animate.min.css`) — animaciones de entrada al hacer
+  scroll (`.reveal` + `data-animate="..."` en `main.js`); las clases se
+  limpian con `animationend` para no interferir con transiciones de hover.
+- **jQuery** (`jquery.min.js`) — requerido por Owl Carousel y Justified
+  Gallery.
+- **Google Maps JavaScript API** (`map.js`, `<script>` en `index.html`) —
+  mapa de la sección Contacto. La key debe tener habilitada la **Maps
+  JavaScript API** en Google Cloud Console (no la Embed API, son productos
+  separados).
+
+## Dominio de producción
+
+`https://lamorada.com.bo` (confirmado). Usado en canonical, sitemap.xml,
+robots.txt y metadatos Open Graph/Twitter Card.
 
 ## Contacto (dato real, no inventar otro)
 
@@ -94,8 +123,12 @@ web-lamorada/
 
 ## Pendientes de contenido (no rellenar con datos inventados)
 
-- Precios y cuotas reales por sector (Diamante / Rubí / Esmeralda).
-- Testimonios reales de familias, con autorización explícita.
+- Precios de Esmeralda en las tablas NI/NF (Diamante y Rubí ya están
+  confirmados en bolivianos; Esmeralda muestra "Consulta con un asesor").
+- Testimonios reales de familias, con autorización explícita (los actuales
+  están marcados como ilustrativos).
+- Videos de YouTube definitivos para las pestañas NI/NF (ambas usan hoy el
+  mismo video de ejemplo mientras se graban los reales).
 
 ## Cómo ver el sitio localmente
 

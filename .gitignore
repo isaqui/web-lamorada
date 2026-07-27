@@ -1,4 +1,5 @@
 node_modules/
+material-ventas/
 .DS_Store
 Thumbs.db
 *.log
