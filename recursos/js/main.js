@@ -101,10 +101,51 @@ document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
 }));
 
 // Lead Form
+const captchaCanvas=document.getElementById('captchaCanvas');
+let captchaCode='';
+function drawCaptcha(){
+  if(!captchaCanvas)return;
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  captchaCode=Array.from({length:6},()=>chars[Math.floor(Math.random()*chars.length)]).join('');
+  const ctx=captchaCanvas.getContext('2d');
+  const w=captchaCanvas.width,h=captchaCanvas.height;
+  ctx.clearRect(0,0,w,h);
+  ctx.fillStyle='#F2EADD';ctx.fillRect(0,0,w,h);
+  const step=w/(captchaCode.length+1);
+  ctx.textBaseline='middle';
+  captchaCode.split('').forEach((ch,i)=>{
+    ctx.save();
+    ctx.translate(step*(i+1),h/2+(Math.random()*8-4));
+    ctx.rotate((Math.random()*0.5-0.25));
+    ctx.font=`700 ${24+Math.floor(Math.random()*4)}px "Barlow Condensed", sans-serif`;
+    ctx.fillStyle=Math.random()<0.25?'#904515':'#1A1A1A';
+    ctx.fillText(ch,0,0);
+    ctx.restore();
+  });
+  for(let i=0;i<3;i++){
+    ctx.strokeStyle='rgba(26,26,26,.35)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(Math.random()*w,Math.random()*h);ctx.lineTo(Math.random()*w,Math.random()*h);ctx.stroke();
+  }
+}
+drawCaptcha();
+document.getElementById('captchaRefresh')?.addEventListener('click',drawCaptcha);
+
 document.getElementById('leadForm').addEventListener('submit',e=>{
-  e.preventDefault();const ok=document.getElementById('formOk');
+  e.preventDefault();
+  const captchaInput=document.getElementById('captchaInput');
+  const captchaError=document.getElementById('captchaError');
+  if(captchaInput.value.trim().toUpperCase()!==captchaCode){
+    captchaError.hidden=false;
+    captchaInput.focus();
+    drawCaptcha();
+    captchaInput.value='';
+    return;
+  }
+  captchaError.hidden=true;
+  const ok=document.getElementById('formOk');
   ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});
   e.target.querySelectorAll('input,textarea').forEach(f=>f.value='');
+  drawCaptcha();
 });
 
 // Gallery — Justified Gallery + filters + modal

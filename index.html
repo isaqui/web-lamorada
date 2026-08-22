@@ -236,18 +236,18 @@
     <!-- NI / NF Tabs -->
     <div class="ni-nf reveal" data-animate="fadeIn">
       <div class="ni-nf-tabs" role="tablist" aria-label="Necesidad Inmediata o Futura">
-        <button class="ni-nf-tab active" data-tab="ni" role="tab" aria-selected="true" aria-controls="tab-ni">
-          <i class="fa-solid fa-bolt"></i>Necesidad Inmediata <span>NI</span>
-        </button>
-        <button class="ni-nf-tab" data-tab="nf" role="tab" aria-selected="false" aria-controls="tab-nf">
+        <button class="ni-nf-tab active" data-tab="nf" role="tab" aria-selected="true" aria-controls="tab-nf">
           <i class="fa-solid fa-seedling"></i>Necesidad Futura <span>NF</span>
+        </button>
+		<button class="ni-nf-tab" data-tab="ni" role="tab" aria-selected="false" aria-controls="tab-ni">
+          <i class="fa-solid fa-bolt"></i>Necesidad Inmediata <span>NI</span>
         </button>
       </div>
 
-      <div class="ni-nf-panel active" id="tab-ni" role="tabpanel">
+      <div class="ni-nf-panel" id="tab-ni" role="tabpanel" hidden>
         <div class="ni-nf-grid">
           <div class="ni-nf-media">
-            <iframe src="https://www.youtube.com/embed/YMPP24R8dd8" title="Necesidad Inmediata — La Morada"
+            <iframe src="https://www.youtube.com/embed/CkATeN9ozkQ" title="Necesidad Inmediata — La Morada"
               loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="ni-nf-content">
@@ -269,10 +269,10 @@
         </div>
       </div>
 
-      <div class="ni-nf-panel" id="tab-nf" role="tabpanel" hidden>
+      <div class="ni-nf-panel active" id="tab-nf" role="tabpanel">
         <div class="ni-nf-grid">
           <div class="ni-nf-media">
-            <iframe src="https://www.youtube.com/embed/YMPP24R8dd8" title="Necesidad Futura — La Morada"
+            <iframe src="https://www.youtube.com/embed/CkATeN9ozkQ" title="Necesidad Futura — La Morada"
               loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="ni-nf-content">
@@ -672,6 +672,20 @@
         </select>
       </div>
       <div class="field"><label for="msg">Mensaje (opcional)</label><textarea id="msg" name="msg"></textarea></div>
+      <div class="field captcha-row">
+        <div class="captcha-box">
+          <label>Código de verificación</label>
+          <div class="captcha-display">
+            <canvas id="captchaCanvas" width="150" height="50" aria-hidden="true"></canvas>
+            <button type="button" class="captcha-refresh" id="captchaRefresh" aria-label="Generar nuevo código"><i class="fa-solid fa-arrows-rotate"></i></button>
+          </div>
+        </div>
+        <div class="captcha-box">
+          <label for="captchaInput">Escribe el código</label>
+          <input id="captchaInput" name="captcha" type="text" autocomplete="off" required>
+          <span class="captcha-error" id="captchaError" hidden>El código no coincide, intenta de nuevo.</span>
+        </div>
+      </div>
       <button class="btn btn-primary btn-lg" type="submit" style="width:100%;justify-content:center">Solicitar información</button>
       <p class="consent">Usaremos tus datos únicamente para responder tu consulta. No compartimos tu información.</p>
     </form>
